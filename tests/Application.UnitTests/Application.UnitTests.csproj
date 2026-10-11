@@ -7,17 +7,7 @@
 
     <ItemGroup>
         <PackageReference Include="Azure.Identity" />
-        <PackageReference Include="Microsoft.NET.Test.Sdk" />
-        <PackageReference Include="nunit" />
-        <PackageReference Include="NUnit.Analyzers">
-          <PrivateAssets>all</PrivateAssets>
-          <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
-        </PackageReference>
-        <PackageReference Include="NUnit3TestAdapter" />
-        <PackageReference Include="coverlet.collector">
-          <PrivateAssets>all</PrivateAssets>
-          <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
-        </PackageReference>
+        
         <PackageReference Include="Moq" />
         <PackageReference Include="Shouldly" />
     </ItemGroup>
@@ -25,6 +15,12 @@
     <ItemGroup>
         <ProjectReference Include="..\..\src\Application\Application.csproj" />
         <ProjectReference Include="..\..\src\Infrastructure\Infrastructure.csproj" />
+    </ItemGroup>
+
+    <ItemGroup>
+      <Folder Include="Common\Behaviours\" />
+      <Folder Include="Common\Exceptions\" />
+      <Folder Include="Common\Mappings\" />
     </ItemGroup>
 
 </Project>
