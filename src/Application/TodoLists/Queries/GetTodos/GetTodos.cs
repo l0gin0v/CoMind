@@ -31,13 +31,13 @@ public class GetTodosQueryHandler : IRequestHandler<GetTodosQuery, TodosVm>
 
             Colours =
             [
-                new ColourDto { Code = Colour.Grey, Name = nameof(Colour.Grey) },
-                new ColourDto { Code = Colour.Purple, Name = nameof(Colour.Purple) },
-                new ColourDto { Code = Colour.Blue, Name = nameof(Colour.Blue) },
-                new ColourDto { Code = Colour.Teal, Name = nameof(Colour.Teal) },
-                new ColourDto { Code = Colour.Green, Name = nameof(Colour.Green) },
-                new ColourDto { Code = Colour.Orange, Name = nameof(Colour.Orange) },
-                new ColourDto { Code = Colour.Red, Name = nameof(Colour.Red) },
+                new ColourDto { Code = Color.Grey, Name = nameof(Color.Grey) },
+                new ColourDto { Code = Color.Purple, Name = nameof(Color.Purple) },
+                new ColourDto { Code = Color.Blue, Name = nameof(Color.Blue) },
+                new ColourDto { Code = Color.Teal, Name = nameof(Color.Teal) },
+                new ColourDto { Code = Color.Green, Name = nameof(Color.Green) },
+                new ColourDto { Code = Color.Orange, Name = nameof(Color.Orange) },
+                new ColourDto { Code = Color.Red, Name = nameof(Color.Red) },
             ],
 
             Lists = await _context.TodoLists

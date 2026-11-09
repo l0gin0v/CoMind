@@ -94,7 +94,7 @@ public class ApplicationDbContextInitialiser
             _context.TodoLists.Add(new TodoList
             {
                 Title = "Tasks",
-                Colour = Colour.Green,
+                Colour = Color.Green,
                 Items =
                 {
                     new TodoItem { Title = "Make a todo list 📃" },
