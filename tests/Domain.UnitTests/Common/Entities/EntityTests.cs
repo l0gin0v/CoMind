@@ -5,7 +5,8 @@ namespace CoMind.Domain.UnitTests.Common.Entities;
 public class EntityTests
 {
     private class TestEntity : Entity { }
-    public class TestEvent : Event { }
+
+    private record TestEvent : Event { }
 
     [Fact]
     public void AddDomainEvent_ShouldAddEventToCollection()
