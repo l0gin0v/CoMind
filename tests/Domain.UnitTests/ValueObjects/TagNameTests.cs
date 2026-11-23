@@ -31,6 +31,26 @@ public class TagNameTests
 
         act.Should().Throw<DomainException>().WithMessage("*50*");
     }
+    
+    [Fact]
+    public void Create_WithNameExactly50Chars_Succeeds()
+    {
+        var value = new string('a', 50);
+
+        var tagName = TagName.Create(value);
+
+        tagName.Value.Should().HaveLength(50);
+    }
+
+    [Fact]
+    public void Create_WithWhitespaceAroundName_TrimsBeforeCheckingLength()
+    {
+        var value = $"  {new string('a', 50)}  ";
+
+        var tagName = TagName.Create(value);
+
+        tagName.Value.Should().HaveLength(50);
+    }
 
     [Fact]
     public void Equals_ReturnsTrueForSameValue()

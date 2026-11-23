@@ -1,6 +1,6 @@
 namespace CoMind.Domain.ValueObjects;
 
-public class TagName : ValueObject
+public sealed class TagName : ValueObject
 {
     public string Value { get; }
     
@@ -9,12 +9,12 @@ public class TagName : ValueObject
     public static TagName Create(string name)
     {
         if (string.IsNullOrWhiteSpace(name))
-            throw new DomainException("Имя тэга не может быть пустым.");
+            throw new DomainException("Имя тега не может быть пустым.");
 
         name = name.Trim().ToLowerInvariant();
 
         if (name.Length > 50)
-            throw new DomainException("Имя тэга не может превышать 50 символов.");
+            throw new DomainException("Имя тега не может превышать 50 символов.");
 
         return new TagName(name);
     }

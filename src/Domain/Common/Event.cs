@@ -2,4 +2,4 @@
 
 namespace CoMind.Domain.Common;
 
-public abstract record Event : INotification { }
+public abstract record Event : INotification;

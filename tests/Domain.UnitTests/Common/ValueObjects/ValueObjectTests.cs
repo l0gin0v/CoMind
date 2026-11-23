@@ -78,6 +78,15 @@ public class ValueObjectTests
 
         a.Equals(b).Should().BeFalse();
     }
+    
+    [Fact]
+    public void Equals_ReturnsFalse_WhenComponentsHaveDifferentOrder()
+    {
+        var first = new TestVo("x", 1);
+        var second = new TestVo(1, "x");
+
+        first.Equals(second).Should().BeFalse();
+    }
 
     [Fact]
     public void OperatorEquals_ReflectsEquality()

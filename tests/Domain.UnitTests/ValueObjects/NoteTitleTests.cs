@@ -52,6 +52,16 @@ public class NoteTitleTests
 
         title.Value.Should().HaveLength(200);
     }
+    
+    [Fact]
+    public void Create_WithWhitespaceAroundTitle_TrimsBeforeCheckingLength()
+    {
+        var value = $"  {new string('a', 200)}  ";
+
+        var title = NoteTitle.Create(value);
+
+        title.Value.Should().HaveLength(200);
+    }
 
     [Fact]
     public void Equals_WithSameValue_ReturnsTrue()

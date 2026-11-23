@@ -66,4 +66,22 @@ public class EntityTests
         // Проверяем интерфейс защиты
         entity.DomainEvents.Should().BeAssignableTo<IReadOnlyCollection<Event>>();
     }
+    
+    
+    [Fact]
+    public void NewEntity_ShouldHaveNonEmptyId()
+    {
+        var entity = new TestEntity();
+
+        entity.Id.Should().NotBe(Guid.Empty);
+    }
+
+    [Fact]
+    public void NewEntities_ShouldHaveDifferentIds()
+    {
+        var first = new TestEntity();
+        var second = new TestEntity();
+
+        first.Id.Should().NotBe(second.Id);
+    }
 }

@@ -1,5 +1,3 @@
-using CoMind.Domain.Exceptions;
-
 namespace CoMind.Domain.ValueObjects;
 
 public sealed class NoteContent : ValueObject

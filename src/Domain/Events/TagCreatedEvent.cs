@@ -1,3 +1,3 @@
 namespace CoMind.Domain.Events;
 
-public sealed record TagCreatedEvent(int TagId, string NameValue, string TagUserId) : Event { }
+public sealed record TagCreatedEvent(Guid TagId, string NameValue, string TagUserId) : Event;
