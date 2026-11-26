@@ -37,6 +37,7 @@ public class Comment : AuditableEntity, ISyncable
         var comment = new Comment
         {
             NoteId = note.Id,
+            Note = note,
             AuthorId = authorId,
             Content = content
         };

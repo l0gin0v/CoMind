@@ -30,7 +30,7 @@ public sealed class SyncVersion : ValueObject
         return new SyncVersion(Value + 1);
     }
 
-    protected override IEnumerable<object> GetEqualityComponents()
+    protected override IEnumerable<object?> GetEqualityComponents()
     {
         yield return Value;
     }

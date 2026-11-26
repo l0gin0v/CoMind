@@ -6,13 +6,13 @@ public class ValueObjectTests
 {
     private sealed class TestVo(params object?[] components) : ValueObject
     {
-        protected override IEnumerable<object> GetEqualityComponents()
-            => components.Select(c => c!);
+        protected override IEnumerable<object?> GetEqualityComponents()
+            => components;
     }
     
     private sealed class OtherVo(params object?[] c) : ValueObject
     {
-        protected override IEnumerable<object> GetEqualityComponents()
+        protected override IEnumerable<object?> GetEqualityComponents()
             => c.Select(x => x!);
     }
 

@@ -18,7 +18,7 @@ public sealed class NoteContent : ValueObject
         return new NoteContent(markdown);
     }
 
-    protected override IEnumerable<object> GetEqualityComponents()
+    protected override IEnumerable<object?> GetEqualityComponents()
     {
         yield return Markdown;
     }

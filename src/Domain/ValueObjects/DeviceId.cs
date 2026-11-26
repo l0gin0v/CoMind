@@ -17,7 +17,7 @@ public sealed class DeviceId : ValueObject
         return new DeviceId(value);
     }
 
-    protected override IEnumerable<object> GetEqualityComponents()
+    protected override IEnumerable<object?> GetEqualityComponents()
     {
         yield return Value;
     }

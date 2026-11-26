@@ -39,7 +39,7 @@ public sealed class Color : ValueObject
 
     public override string ToString() => Code;
 
-    protected override IEnumerable<object> GetEqualityComponents()
+    protected override IEnumerable<object?> GetEqualityComponents()
     {
         yield return Code;
     }

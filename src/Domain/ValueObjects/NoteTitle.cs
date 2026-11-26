@@ -19,7 +19,7 @@ public sealed class NoteTitle : ValueObject
         return new NoteTitle(title);
     }
 
-    protected override IEnumerable<object> GetEqualityComponents()
+    protected override IEnumerable<object?> GetEqualityComponents()
     {
         yield return Value;
     }

@@ -19,7 +19,7 @@ public sealed class TagName : ValueObject
         return new TagName(name);
     }
 
-    protected override IEnumerable<object> GetEqualityComponents()
+    protected override IEnumerable<object?> GetEqualityComponents()
     {
         yield return Value;
     }

@@ -1,3 +1,8 @@
 namespace CoMind.Domain.Enums;
 
-public enum OperationType {  }
+public enum OperationType
+{
+    Create,
+    Update,
+    Delete
+}
